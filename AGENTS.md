@@ -12,7 +12,7 @@ The Scoop bucket for `coilyco-flight-deck/*` tools on Windows. Sibling to the fl
 
 ## Project shape
 
-- `bucket/*.json` - Scoop manifests, one per published tool. Today: `umbra`, `agent-compose`, `aos`.
+- `bucket/*.json` - Scoop manifests, one per published tool. Today: `umbra`, `agent-compose`, `aos`, and `agent-compose-gate`, which installs nothing.
 - `README.md` - install steps and the upstream-side contract for autoupdate.
 - `.forgejo/workflows/autoupdate.yml`, `scripts/update-manifests.mjs` and `scripts/autoupdate-sources.json` - the hourly backstop that lands version bumps when a per-repo push stops.
 
