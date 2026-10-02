@@ -20,5 +20,6 @@
                 ["agent-compose-windows-amd64.exe", "acompose", "compose"]
             ]
         }
-    }
+    },
+    "pre_install": "$c = New-Object Net.Sockets.TcpClient; try { if (-not $c.ConnectAsync('forgejo.coilysiren.me', 443).Wait(3000)) { throw 'timeout' } } catch { throw 'agent-compose is only available on the coilyco tailnet. If you''re on the tailnet and have access, connect and retry. If you''re the general public, you don''t have access to this.' } finally { $c.Dispose() }"
 }
