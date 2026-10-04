@@ -6,8 +6,7 @@ How an upstream release becomes a bumped manifest, with no human running `scoop 
 
 `scoop update <app>` compares the installed version to the manifest without
 re-deriving it from upstream, so if nothing rewrites `bucket/*.json` every client
-calls its pinned version "latest" forever. That is how `ward` sat at `0.353.0`
-(scoop-bucket#1).
+calls its pinned version "latest" forever, as `ward` did at `0.353.0` (scoop-bucket#1).
 
 ## Push is the normal path, this job is the backstop
 
@@ -19,8 +18,9 @@ each `checkver` feed, and writes upstream's manifest **bytes** at the newest
 usable release. It re-derives nothing: a second renderer would drift from the
 repo owning the shape, and keeping that pull config beside the script rather than
 inside `bucket/*.json` is what keeps each manifest byte-identical to upstream's.
-The checkout pins `ref: main`: a schedule runs at the sha it registered on, and
-`[skip ci]` bumps never re-register it (hourly rejected pushes from 2026-09-12).
+The checkout pins `ref: main`, since a schedule runs at the sha it registered on.
+It takes `CI_RELEASE_TOKEN` to push as coilyco-ops, since the Actions token is
+virtual uid -2 and protected `main` 500s on it (teable:coilyco/scoop-bucket#8762).
 
 ## What makes a release usable
 

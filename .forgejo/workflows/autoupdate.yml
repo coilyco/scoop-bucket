@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: main
+          token: ${{ secrets.CI_RELEASE_TOKEN }} # push as coilyco-ops, see docs/autoupdate.md
 
       - name: Advance manifests to newest complete releases
         run: node scripts/update-manifests.mjs
