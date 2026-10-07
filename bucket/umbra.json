@@ -1,17 +1,17 @@
 {
-    "version": "0.250.0",
+    "version": "0.253.0",
     "description": "Generate guarded CLIs from KDL policy and committed API locks",
     "homepage": "https://github.com/coilyco/umbra",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/coilyco/umbra/releases/download/v0.250.0/umbra-windows-amd64.exe",
-            "hash": "49bac824df195b98e20a9328a001339251adb44246db2963f60b066e5a7249de",
+            "url": "https://github.com/coilyco/umbra/releases/download/v0.253.0/umbra-windows-amd64.exe",
+            "hash": "80cc4fb2a40c9da351784fc94631d449dc0b14c5958dbb2742847b28238ae73b",
             "bin": [["umbra-windows-amd64.exe", "umbra"]]
         },
         "arm64": {
-            "url": "https://github.com/coilyco/umbra/releases/download/v0.250.0/umbra-windows-arm64.exe",
-            "hash": "4826682bb2822beb953f3836b90c74fda4601a0493f8db0e1ea972cc6e8b7971",
+            "url": "https://github.com/coilyco/umbra/releases/download/v0.253.0/umbra-windows-arm64.exe",
+            "hash": "46c505cbf6af4842ab040de4f417f3b7788d82c65fac2cb6cd92ad8fe48732a5",
             "bin": [["umbra-windows-arm64.exe", "umbra"]]
         }
     }
