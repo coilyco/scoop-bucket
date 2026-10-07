@@ -5,7 +5,7 @@ description: Scoop bucket for Windows binaries published by coilyco-flight-deck.
 
 # repo-scoop-bucket
 
-Pointer to `~/projects/coilyco-flight-deck/scoop-bucket/`.
+Pointer to `~/projects/coilyco/scoop-bucket/`.
 
 - [`README.md`](../../../README.md) - what it is, quickstart, layout.
 - [`AGENTS.md`](../../../AGENTS.md) - agent-facing operating context for the repo.
