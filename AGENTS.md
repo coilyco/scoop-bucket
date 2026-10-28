@@ -10,7 +10,7 @@ Orientation for fresh Claude / mobile sessions. Keep this short.
 
 The Scoop bucket for `coilyco-flight-deck/*` tools on Windows. Sibling to the flight-deck Homebrew tap. Each `bucket/*.json` manifest points at a release asset published from its upstream repo.
 
-GitHub is canonical for this repo (COI-2945): open pull requests on GitHub, not Forgejo. The git-workflow block below still names Forgejo until this repo's hook pin moves to a catalog that renders `forge = "github"`.
+GitHub is canonical for this repo (COI-2945): open pull requests on GitHub, not Forgejo.
 
 ## Project shape
 
