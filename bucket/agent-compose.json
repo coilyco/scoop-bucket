@@ -1,25 +1,24 @@
 {
-    "version": "2.217.0",
+    "version": "2.218.0",
     "description": "Core Roster context composition for native agent harnesses",
-    "homepage": "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose",
+    "homepage": "https://github.com/coilyco/agent-compose",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.217.0/agent-compose-windows-amd64.exe",
-                "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.217.0/agent-compose-roster.tar.gz",
-                "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.217.0/agent-compose-bundles.tar.gz"
+                "https://github.com/coilyco/agent-compose/releases/download/v2.218.0/agent-compose-windows-amd64.exe",
+                "https://github.com/coilyco/agent-compose/releases/download/v2.218.0/agent-compose-roster.tar.gz",
+                "https://github.com/coilyco/agent-compose/releases/download/v2.218.0/agent-compose-bundles.tar.gz"
             ],
             "hash": [
-                "eaac43cfea50d35229e69f8e257245eb2db9eabc3d39984be0a123260acd4987",
-                "d7f5c385067a466e5d3c4a9ba9d80d4c5a8e7ca31cb46b0ebfc3bc2f4f122ff9",
-                "4c99958156ae03444c3c2f1b22147ac4e610d324b09db10de824a88190214ab5"
+                "6b7359fbd2cae6045be9807bd449843a09517a94de252c33c0cf649860efbcfc",
+                "e5dbd908bcd97f51d172431f511c0e4217a1301d21a5ad7f72d8470495b71723",
+                "638e1390ba738489bb0c2c42175ab5ef3ed015e93e47c2d1a89dc860df1e0621"
             ],
             "bin": [
                 ["agent-compose-windows-amd64.exe", "agent-compose"],
                 ["agent-compose-windows-amd64.exe", "acompose", "compose"]
             ]
         }
-    },
-    "pre_install": "$c = New-Object Net.Sockets.TcpClient; try { if (-not $c.ConnectAsync('forgejo.coilysiren.me', 443).Wait(3000)) { throw 'timeout' } } catch { throw 'agent-compose is only available on the coilyco tailnet. If you''re on the tailnet and have access, connect and retry. If you''re the general public, you don''t have access to this.' } finally { $c.Dispose() }"
+    }
 }
