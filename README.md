@@ -1,24 +1,24 @@
 # scoop-bucket
 
 The Scoop bucket for every `coilyco-flight-deck` CLI on Windows. Sibling to the
-flight-deck [Homebrew tap](https://forgejo.coilysiren.me/coilyco-flight-deck/homebrew-tap),
+[Homebrew tap](https://github.com/coilyco/homebrew-tap),
 which serves the same tools on macOS and Linux.
 
-Forgejo is canonical here. Both the bucket and the binaries it points at are
-hosted on `forgejo.coilysiren.me`.
+GitHub is canonical here, and the binaries each manifest points at are GitHub
+release assets, so nothing here needs the tailnet.
 
 ## Install
 
 ```powershell
-scoop bucket add coilyco-flight-deck https://forgejo.coilysiren.me/coilyco-flight-deck/scoop-bucket
+scoop bucket add coilyco https://github.com/coilyco/scoop-bucket
 ```
 
 Then install whichever tools you want:
 
 ```powershell
-scoop install coilyco-flight-deck/umbra
-scoop install coilyco-flight-deck/agent-compose
-scoop install coilyco-flight-deck/aos
+scoop install coilyco/umbra
+scoop install coilyco/agent-compose
+scoop install coilyco/aos
 ```
 
 Upgrade with `scoop update <name>`, or `scoop update *` for everything.
