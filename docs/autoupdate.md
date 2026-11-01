@@ -19,8 +19,8 @@ usable release. It re-derives nothing: a second renderer would drift from the
 repo owning the shape, and keeping that pull config beside the script rather than
 inside `bucket/*.json` is what keeps each manifest byte-identical to upstream's.
 The checkout pins `ref: main`, since a schedule runs at the sha it registered on.
-It takes `CI_RELEASE_TOKEN` to push as coilyco-ops, since the Actions token is
-virtual uid -2 and protected `main` 500s on it (teable:coilyco/scoop-bucket#8762).
+It pushes as a coilyco-ops App token (`COILYCO_OPS_APP_ID`, `COILYCO_OPS_APP_PRIVATE_KEY_BASE64`),
+since the Actions token cannot push to a protected `main`. Sources read GitHub release feeds.
 
 ## What makes a release usable
 

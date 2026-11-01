@@ -9,7 +9,7 @@ if git diff --quiet -- bucket; then
 fi
 
 git config user.name "coilyco-ops"
-git config user.email "coilyco-ops@noreply.forgejo.coilysiren.me"
+git config user.email "coilyco-ops@coilysiren.me"
 git add bucket
 # Autoupdate bumps close no issue; the commit-msg closes-issue hook is a
 # client-side pre-commit hook and is not installed on the runner.
