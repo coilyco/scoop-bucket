@@ -44,7 +44,7 @@ Each upstream renders its own manifest and publishes it as a release asset, then
 its release CI pushes that file into `bucket/`. That push is the normal path, and
 the commits reading `chore(<tool>): bump manifest to vX.Y.Z [skip ci]` are it.
 
-[`.forgejo/workflows/autoupdate.yml`](.forgejo/workflows/autoupdate.yml) is the
+[`.github/workflows/autoupdate.yml`](.github/workflows/autoupdate.yml) is the
 backstop for when that push stops. It runs
 [`scripts/update-manifests.mjs`](scripts/update-manifests.mjs) hourly, which
 follows the `checkver` feeds in

@@ -1,6 +1,5 @@
 # Advance each manifest to the newest complete upstream release and land the bump.
 # Why it exists and what "complete" means: docs/autoupdate.md, scoop-bucket#1.
-
 name: autoupdate
 
 on:
@@ -9,17 +8,25 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   bump:
-    runs-on: docker
-    container: forgejo.coilysiren.me/coilyco-flight-deck/agentic-os:release
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - id: app
+        name: Mint a coilyco-ops App token to push the bump
+        uses: coilyco/agentic-os/actions/app-token@0dc318a369ff34254a7187b5b1b85ff9b6580750
+        with:
+          app_id: ${{ secrets.COILYCO_OPS_APP_ID }}
+          private_key_base64: ${{ secrets.COILYCO_OPS_APP_PRIVATE_KEY_BASE64 }}
+          repositories: scoop-bucket
+
+      - name: Checkout
+        uses: actions/checkout@v6
         with:
           ref: main
-          token: ${{ secrets.CI_RELEASE_TOKEN }} # push as coilyco-ops, see docs/autoupdate.md
+          token: ${{ steps.app.outputs.token }}
 
       - name: Advance manifests to newest complete releases
         run: node scripts/update-manifests.mjs
@@ -32,4 +39,5 @@ jobs:
         continue-on-error: true
         env:
           SENTRY_DSN: ${{ secrets.SENTRY_CI_DSN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: python3 scripts/alert_sentry.py
