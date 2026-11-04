@@ -1,12 +1,12 @@
 {
-    "version": "0.512.0",
+    "version": "0.513.0",
     "description": "Agent runtime composition root for Agentic OS",
     "homepage": "https://github.com/coilyco/agentic-os",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/coilyco/agentic-os/releases/download/aos-v0.512.0/aos-windows-amd64.exe",
-            "hash": "b879ddabe984cadf632f6086b82c8d690933329b38f5a56473fca1fc5a07093a",
+            "url": "https://github.com/coilyco/agentic-os/releases/download/aos-v0.513.0/aos-windows-amd64.exe",
+            "hash": "8fb310e1d8a51ed5ccdf9f0b7b5619ddfa49c30414d0f42ee5c6850c8bb0f280",
             "bin": [
                 ["aos-windows-amd64.exe", "aos"],
                 ["aoscompose-windows-amd64.exe", "aoscompose"],
@@ -16,7 +16,7 @@
         }
     },
     "pre_install": [
-        "Invoke-WebRequest -Uri 'https://github.com/coilyco/agentic-os/releases/download/aos-v0.512.0/aoscompose-windows-amd64.exe' -OutFile \"$dir/aoscompose-windows-amd64.exe\"; if ((Get-FileHash \"$dir/aoscompose-windows-amd64.exe\" -Algorithm SHA256).Hash -ne 'b879ddabe984cadf632f6086b82c8d690933329b38f5a56473fca1fc5a07093a') { throw 'aoscompose checksum mismatch' }",
-        "Invoke-WebRequest -Uri 'https://github.com/coilyco/agentic-os/releases/download/aos-v0.512.0/aosguard-windows-amd64.exe' -OutFile \"$dir/aosguard-windows-amd64.exe\"; if ((Get-FileHash \"$dir/aosguard-windows-amd64.exe\" -Algorithm SHA256).Hash -ne '34e360e95a230a3947a5bb2caab387a592158b6fa091a573fd589b6555c9ff76') { throw 'aosguard checksum mismatch' }"
+        "Invoke-WebRequest -Uri 'https://github.com/coilyco/agentic-os/releases/download/aos-v0.513.0/aoscompose-windows-amd64.exe' -OutFile \"$dir/aoscompose-windows-amd64.exe\"; if ((Get-FileHash \"$dir/aoscompose-windows-amd64.exe\" -Algorithm SHA256).Hash -ne '8fb310e1d8a51ed5ccdf9f0b7b5619ddfa49c30414d0f42ee5c6850c8bb0f280') { throw 'aoscompose checksum mismatch' }",
+        "Invoke-WebRequest -Uri 'https://github.com/coilyco/agentic-os/releases/download/aos-v0.513.0/aosguard-windows-amd64.exe' -OutFile \"$dir/aosguard-windows-amd64.exe\"; if ((Get-FileHash \"$dir/aosguard-windows-amd64.exe\" -Algorithm SHA256).Hash -ne 'f7026ebc1831917653b30cb1c43da076067e919df943fdb6871054e0504156f3') { throw 'aosguard checksum mismatch' }"
     ]
 }
