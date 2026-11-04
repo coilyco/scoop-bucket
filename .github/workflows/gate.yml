@@ -1,0 +1,28 @@
+# The org ruleset's required check (COI-3297): a job named `gate`, on PRs and main pushes.
+# Cheap by design, autoupdate pushes here hourly. Checks the manifests parse. No secrets.
+name: gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Manifests parse and each carries a version
+        run: jq -e -n '[inputs | has("version")] | all' bucket/*.json
+      - name: Autoupdate source map parses
+        run: jq empty scripts/autoupdate-sources.json
