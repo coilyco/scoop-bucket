@@ -1,19 +1,19 @@
 {
-    "version": "2.219.0",
+    "version": "2.220.0",
     "description": "Core Roster context composition for native agent harnesses",
     "homepage": "https://github.com/coilyco/agent-compose",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/coilyco/agent-compose/releases/download/v2.219.0/agent-compose-windows-amd64.exe",
-                "https://github.com/coilyco/agent-compose/releases/download/v2.219.0/agent-compose-roster.tar.gz",
-                "https://github.com/coilyco/agent-compose/releases/download/v2.219.0/agent-compose-bundles.tar.gz"
+                "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-windows-amd64.exe",
+                "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-roster.tar.gz",
+                "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-bundles.tar.gz"
             ],
             "hash": [
-                "305d07997feb17c6f73116611a43fe76133c5b0e37432f67f6a44c5b9e5858c5",
-                "3baee588b36f462e9fb51c33a47e3d0e8596ac993f42a6cd2a1ff2037a8c3461",
-                "8fdee4d86050a4a8dc359ab1f41eed2307e73b16cc66170b99b26f911a551c69"
+                "5aa5efd2f1727f2fbd7492e6c834b3a6c0afd56c74147e5e8bb00da55f61d188",
+                "ef7c31b352077eb7e472c48b5f7b5b223f0ae89315b21a9972826846c44321a1",
+                "c737ed5da63cec89b3ea190c2d2e9b18351b17e7792645f72efb8c50ae31c487"
             ],
             "bin": [
                 ["agent-compose-windows-amd64.exe", "agent-compose"],
